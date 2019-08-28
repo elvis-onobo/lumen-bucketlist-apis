@@ -17,17 +17,17 @@ class BucketlistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($paginate)
+    public function index(Request $request, $paginate)
     {
+        $request = new Request(['paginate'=>$paginate]);
+
         // validate results, minimum of 20 and maximum of 100
-        validate($paginate,['paginate' => 'required|numeric|min:20|max:100']);
+        $this->validate($request, ['paginate'=>'required|numeric|min:20|max:100']);
+
         // get all bucketlists
         $bucketlists = Bucketlist::paginate($paginate);
 
         return response()->json($bucketlists);
-        // return [
-        //     'id'=>$bucketlists->id,
-        // ];
     }
 
 
