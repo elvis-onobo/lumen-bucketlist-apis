@@ -20,7 +20,7 @@ class BucketlistController extends Controller
     public function index($paginate)
     {
         // validate results, minimum of 20 and maximum of 100
-        Validator::make($paginate,['paginate' => 'required|numeric|min:20|max:100']);
+        validate($paginate,['paginate' => 'required|numeric|min:20|max:100']);
         // get all bucketlists
         $bucketlists = Bucketlist::paginate($paginate);
 
