@@ -21,7 +21,7 @@ class BucketlistController extends Controller
     {
         $request = new Request(['paginate'=>$paginate]);
 
-        // validate results, minimum of 20 and maximum of 100
+        // validate pagination minimum of 20 and maximum of 100
         $this->validate($request, ['paginate'=>'required|numeric|min:20|max:100']);
 
         // get all bucketlists

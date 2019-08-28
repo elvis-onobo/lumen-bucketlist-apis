@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Bucketlist;
 use App\ListItem;
 
 class ListItemController extends Controller
@@ -20,9 +20,21 @@ class ListItemController extends Controller
         $listitems = ListItem::where('bucketlist_id', $id)
                     ->select('*')
                     ->orderBy('list_items.id', 'desc')
-                    ->paginate(20);
+                    ->first();
+        $bucketlist = Bucketlist::findOrFail($id)->first();
 
-        return response()->json($listitems);
+//        return response()->json($listitems);
+
+        return [
+                'id'=>$bucketlist->id,
+                'name'=>$bucketlist->bucketlist,
+                'items'=>[
+                        $listitems
+                    ],
+                'created_at'=>$bucketlist->created_at,
+                'updated_at'=>$bucketlist->updated_at,
+                'created_by'=>$bucketlist->user_id,
+            ];
     }
 
 
