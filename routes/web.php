@@ -18,7 +18,7 @@ $router->get('/key', function() {
 
 // root URL
 $router->get('/', function() {
-    return view('docs');
+    return view('https://documenter.getpostman.com/view/8410691/SVfQRpKN');
 });
 
 
