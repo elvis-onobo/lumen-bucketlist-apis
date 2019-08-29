@@ -6,8 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=7.1.3",
+        "hmaus/drafter-installer": "^1.0",
         "laravel/lumen-framework": "5.8.*",
-        "tymon/jwt-auth":"^1.0@dev"
+        "tymon/jwt-auth": "^1.0@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.4",
