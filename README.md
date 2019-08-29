@@ -12,16 +12,27 @@ In this exercise you will be required to create a Restful API for a bucket list 
 
 EndPoint	Functionality
 POST /auth/login	Logs a user in
+
 GET /auth/logout	Logs a user out
+
 POST /bucketlists/	Create a new bucket list
+
 GET /bucketlists/	List all the created bucket lists
+
 GET /bucketlists/<id>	Get single bucket list
+	
 PUT /bucketlists/<id>	Update this bucket list
+	
 DELETE /bucketlists/<id>	Delete this single bucket list
+	
 POST /bucketlists/<id>/items/	Create a new item in bucket list
+	
 GET /bucketlists/<id>/items	List all the created items in a bucket list
+	
 GET /bucketlists/<id>/items/<id>	Get a single item in a bucket list
+	
 PUT /bucketlists/<id>/items/<item_id>	Update a bucket list item
+	
 DELETE /bucketlists/<id>/items/<item_id>	Delete an item in a bucket list
 
 
@@ -52,14 +63,23 @@ For this task, you are required to implement Token Based Authentication for the 
 
 EndPoint	Public Access
 POST /auth/login	TRUE
+
 GET /auth/logout	FALSE
+
 POST /bucketlists/	FALSE
+
 GET /bucketlists/	FALSE
+
 GET /bucketlists/<id>	FALSE
+	
 PUT /bucketlists/<id>	FALSE
+	
 DELETE /bucketlists/<id>	FALSE
+	
 POST /bucketlists/<id>/items/	FALSE
+	
 PUT /bucketlists/<id>/items/<item_id>	FALSE
+	
 DELETE /bucketlists/<id>/items/<item_id>	FALSE
 
 
@@ -90,6 +110,7 @@ Bucket lists with the string “bucket1” in their name.
 
 Task 4 - Version your API
 The api can be accessed thus - somedomain.com/api/v1/someendpoint
+
 Task 5 - Document your API
 Use API Blueprint, slate or swagger or any other to document your API.
 Docs should be available at the root url.
