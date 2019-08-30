@@ -3,7 +3,18 @@
 
 https://documenter.getpostman.com/view/8410691/SVfQRpKN
 
+## .ENV
 
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=bucketlist
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+NOTE: You will need to create a JWT Secret key
 
 ## The Project
 
