@@ -5,7 +5,7 @@ https://documenter.getpostman.com/view/8410691/SVfQRpKN
 
 
 
-##The Project
+## The Project
 
 Problem Description
 In this exercise you will be required to create a Restful API for a bucket list service. Specification for the API is shown below. You may use any database you prefer for this assignment. Make use of any framework you desire.
