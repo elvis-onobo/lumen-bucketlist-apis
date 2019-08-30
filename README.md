@@ -16,6 +16,10 @@ DB_PASSWORD=
 
 NOTE: You will need to create a JWT Secret key
 
+```
+php artisan jwt:secret
+```
+
 ## The Project
 
 Problem Description
